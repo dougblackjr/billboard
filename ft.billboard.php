@@ -1,8 +1,5 @@
 <?php
 
-/**
- * Textarea Fieldtype
- */
 class Billboard_ft extends EE_Fieldtype {
 
 	var $info = array(
@@ -14,24 +11,13 @@ class Billboard_ft extends EE_Fieldtype {
 
 	function validate($data)
 	{
-
-		return TRUE;
-
+		return true;
 	}
 
 	function display_field($data)
 	{
 
 		$settings = $this->settings['billboard_text_to_display'];
-
-		// $params = array(
-		// 	'name'     	=> $this->name(),
-		// 	'value'    	=> $settings,
-		// 	'rows'     	=> 6,
-		// 	'disabled'	=> 'disabled',
-		// 	'style'		=> ''
-		// );
-
 		$el = '<div style="width:100%;">' . $settings . '</div>';
 
 		return $el;
@@ -88,11 +74,9 @@ class Billboard_ft extends EE_Fieldtype {
 
 	function save_settings($data)
 	{
-
-		return array(
+		return [
 	        'billboard_text_to_display'  => ee()->input->post('billboard_text_to_display')
-	    );
-
+	    ];
 	}
 
 	public function update($version)
