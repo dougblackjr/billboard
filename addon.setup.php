@@ -10,7 +10,7 @@ return [
 	'settings_exist' => false,
 	'fieldtypes'     => [
 		'billboard' => [
-			'compatibility' => 'text'.
+			'compatibility' => 'text',
 		]
 	]
 ];
